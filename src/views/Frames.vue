@@ -18,6 +18,9 @@ export default {
 
 <style>
 #frames-container {
-
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: auto / 3fr 9fr;
 }
 </style>

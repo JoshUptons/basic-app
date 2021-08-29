@@ -48,7 +48,7 @@ export default {
     float: left;
 }
 #lookup {
-    margin-top: 12px;
+    margin-top: 45px;
 }
 #lookup input {
     padding: 4px;
@@ -63,8 +63,9 @@ export default {
     font-weight: bold;
 }
 .readme {
-    width: 80%;
+    width: 60%;
     margin: auto;
+    margin-top: 25px;
     padding: 1rem;
     text-align: left;
     background: #eee;
@@ -82,5 +83,31 @@ export default {
 }
 .readme p {
     font-size: 1rem;
+}
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.55rem;
+    }
+    .readme h1 {
+        font-size: 1.5rem;
+    }
+    .readme h2 {
+        font-size: 1.25rem;
+
+    }
+    .readme h3 {
+        font-size: 1rem;
+    }
+    .readme p {
+        font-size: .9rem;
+    }
+    #lookup {
+        width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+    #lookup input[type=text] {
+        margin-bottom: 2rem;
+    }
 }
 </style>

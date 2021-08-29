@@ -12,10 +12,16 @@ const routes = [
     { path: '/frames/:frame', name: 'Frame', component: Frame, props: true, meta: {
         breadcrumb: [
             { name: 'Home', link: "/"},
-            { name: 'Frame' }
+            { name: 'Frames', link: '/frames' },
+            { name: 'Frame' },
         ]
     } },
-    { path: '/frames', name: 'Frames', component: Frames}
+    { path: '/frames', name: 'Frames', component: Frames, meta: {
+        breadcrumb: [
+            { name: 'Home', link: '/' },
+            { name: 'Frames' }
+        ]
+    }}
 ]
 
 const router = new VueRouter({

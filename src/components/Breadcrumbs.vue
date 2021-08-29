@@ -43,7 +43,10 @@ export default {
     color: black;
     font-weight: 500;
 }
-.current::before {
+.linked::before, .current::before    {
     content: '/'
+}
+.linked:first-child::before {
+    content: ''
 }
 </style>

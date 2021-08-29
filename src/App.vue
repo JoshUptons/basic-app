@@ -20,7 +20,18 @@ export default {
   data() {
     return {
       data: {
-
+        sequences: [
+          {
+            location: 'w1005',
+            components: [
+              {
+                type: 'frame',
+                name: 'FRM3001',
+                data: '123'
+              }
+            ]
+          }
+        ]
       }
     }
   },
@@ -50,9 +61,9 @@ export default {
     width: 100%;
     height: 50px;
     display: block;
-    background: #025226;
+    background: #11b8ff;
     text-align: left;
-    padding: .1rem 11%;
+    padding: .2rem 11%;
 }
 .header h1 {
     color: white;
@@ -62,8 +73,6 @@ export default {
     width: 100%;
     margin: 0;
   }
-}
-@media only screen and (max-width: 400px) {
   .header h1 {
     font-size: 1.5rem;
   }
