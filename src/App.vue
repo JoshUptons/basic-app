@@ -17,28 +17,6 @@ export default {
     Breadcrumbs,
     Header
   },
-  data() {
-    return {
-      data: {
-        sequences: [
-          {
-            location: 'w1005',
-            components: [
-              {
-                type: 'frame',
-                name: 'FRM3001',
-                data: '123'
-              }
-            ]
-          }
-        ]
-      }
-    }
-  },
-  
-  mounted() {
-    
-  }
 }
 </script>
 

@@ -19,15 +19,20 @@ export default {
         }
     },
     watch: {
-    '$route' () {
-      this.breadcrumbList = this.$route.meta.breadcrumb;
-    }
+        '$route' () {
+            this.breadcrumbList = this.$route.meta.breadcrumb;
+        }
     },
     methods: {
         routeTo(index) {
-        if (this.breadcrumbList[index].link) this.$router.push(this.breadcrumbList[index].link)
+            if (this.breadcrumbList[index].link) this.$router.push(this.breadcrumbList[index].link)
         }
     },
+    mounted() {
+        if (this.breadcrumbList.length == 0) {
+            this.breadcrumbList = this.$route.meta.breadcrumb
+        }
+    }
 }
 </script>
 

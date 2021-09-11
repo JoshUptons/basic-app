@@ -15,28 +15,28 @@
             <input type="text" ref="lookup" placeholder="Sequence or Part Number">
             <input type="submit" value="Search">
         </form>
+        <a href="http://localhost:8080/basic-app/#/everything">Everything</a>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: 'Home',
     methods: {
+        ...mapGetters([
+            'search'
+        ]),
         onSubmit() {
-            let lookup = this.$refs.lookup.value;
-            if ( ! this.invalidLookup(lookup) ) {
-                // search
-                console.log('begin search', lookup)
-                this.$router.push({name: 'Frame', params: {frame: lookup}})
-            } else {
-                console.error('invalid lookup value')
-                alert('Invalid Search Format\nValid characters are [a-Z][0-9][-#*]')
-            }
+            
         },
         invalidLookup(lookup) {
             let regex = new RegExp(/[^\w\d-#.]+/g)
             return regex.test(lookup)
         }
+    },
+    mounted() {
+        console.log(this.$store.state.parts)
     }
 }
 </script>
