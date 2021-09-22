@@ -15,7 +15,7 @@
             <input type="text" ref="lookup" placeholder="Sequence or Part Number">
             <input type="submit" value="Search">
         </form>
-        <a href="http://localhost:8080/basic-app/#/everything">Everything</a>
+        <a @click="$router.push('/everything')">Everything</a>
     </div>
 </template>
 
