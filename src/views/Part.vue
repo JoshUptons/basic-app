@@ -14,7 +14,7 @@
             <div class="part-name"><span>{{ computedPart['Complete Number'] }}</span></div>
             <pdf v-if="'URL' in computedPart" id="pdf" :src="computedPart.URL"></pdf>
             <div v-if="'URL' in computedPart == false" id="pdf">No PDF on file</div>
-            <button id="download-pdf">Download PDF</button>
+            <a :href="computedPart.URL" id="download-pdf" download>Download PDF</a>
         </div>
     </div>
 </template>
@@ -85,7 +85,7 @@ export default {
     border: 1px solid #ccc;
     margin: auto;
     display: grid;
-    grid-template: 10% 80% 10% / auto;
+    grid-template: 35px 80% 10% / auto;
     overflow: hidden;
 }
 #pdf {
@@ -94,24 +94,23 @@ export default {
 }
 .part-name {
     height: 100%;
-    width: 30%;
+    width: 100%;
     text-align: center;
-    padding-top: 2%;
+    padding-top: .25rem;
+    font-size: 1.2rem;
     background: #eee;
     font-weight: bold;
-    transform: skew(-45deg) translateX(-45px);
     display: block;
 }
-.part-name span {
-    transform: skew(45deg) translateX(10px);
-    font-size: 1.2rem;
-    display: block;
-}
-#pdf-preview button {
-    width: auto;
+#download-pdf {
+    width: 200px;
     padding: 0 .35rem;
-    height: 50%;
+    height: 100%;
     margin: auto;
     margin-top: 1rem;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
 }
 </style>

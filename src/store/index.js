@@ -4,9 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 function isSequence(part) {
-  let pattern = /E[\w\d]+/g
-  let regex = new RegExp(pattern)
-  return regex.test(part['Complete Number'])
+  return part.Item.indexOf('.') < 0
 }
 
 const store = new Vuex.Store({

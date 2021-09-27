@@ -35,27 +35,11 @@ export default {
   margin-left: 10%;
   height: 700px;
 }
-.header {
-    width: 100%;
-    height: 50px;
-    display: block;
-    background: #11b8ff;
-    text-align: left;
-    padding: .2rem 11%;
-}
-.header h1 {
-    color: white;
-}
+
 @media only screen and (max-width: 600px) {
   .container {
     width: 100%;
     margin: 0;
-  }
-  .header h1 {
-    font-size: 1.5rem;
-  }
-  .header {
-    padding: .5rem 11%;
   }
 }
 </style>
